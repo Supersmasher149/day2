@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace day2
 {
@@ -16,17 +17,30 @@ namespace day2
             //splits the character
             string[] character = max[1].Split(":");
             //splits the password
-             
+            string password = max[2];
             
             //convertes max string[] into int
             int intMax = Int32.Parse(max[0]);
             //converts min string[] into int
             int intMin = Int32.Parse(min[0]);
-            //convert character into a string
+            //converts character into a string
             string stringCharacter = character[0];
-
+            //converts string character into a char
+            char charCharacter = char.Parse(stringCharacter);
+            //password already 
             
-            Console.WriteLine(max[2]);
+            //checks the frequency of the char
+            int freq = password.Count(f => (f == charCharacter));
+           
+            if (freq <= intMax && freq >= intMin)
+            {
+                Console.WriteLine("true");
+            }
+            else
+            {
+                Console.WriteLine("false");
+            }
+            Console.WriteLine(freq);
         }
     }
 }
