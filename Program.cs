@@ -43,7 +43,7 @@ namespace day2
                     Console.WriteLine("false");
                 }
                 Console.WriteLine(freq);
-            }6
+            }
         }
     }
 }
