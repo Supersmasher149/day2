@@ -9,11 +9,11 @@ namespace day2
         {
             string[] lines = System.IO.File.ReadAllLines(@"C:\Users\walte\source\repos\day2\TextFile1.txt");
             //Console.WriteLine(lines[0]);
-            
+            int truePasswords = 0;
              for (int i = 0; i < lines.Length; i++)
             {
                 //splits the min string
-                string[] min = lines[0].Split("-");
+                string[] min = lines[i].Split("-");
                 //splits the max string
                 string[] max = min[1].Split(" ");
                 //splits the character
@@ -37,6 +37,7 @@ namespace day2
                 if (freq <= intMax && freq >= intMin)
                 {
                     Console.WriteLine("true");
+                    truePasswords++;
                 }
                 else
                 {
@@ -44,6 +45,7 @@ namespace day2
                 }
                 Console.WriteLine(freq);
             }
+            Console.WriteLine(truePasswords);
         }
     }
 }
