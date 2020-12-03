@@ -36,14 +36,14 @@ namespace day2
 
                 if (freq <= intMax && freq >= intMin)
                 {
-                    Console.WriteLine("true");
+                    //Console.WriteLine("true");
                     truePasswords++;
                 }
                 else
                 {
-                    Console.WriteLine("false");
+                    //Console.WriteLine("false");
                 }
-                Console.WriteLine(freq);
+                //Console.WriteLine(freq);
             }
             Console.WriteLine(truePasswords);
         }
